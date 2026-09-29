@@ -1,0 +1,48 @@
+<!doctype html>
+<meta charset="utf-8" />
+<style>
+  html, body { margin: 0; background: transparent; }
+  svg { display: block; }
+</style>
+<!--
+  macOS Big Sur icon grid: a 824x824 squircle (corner radius 185) centred on a
+  1024x1024 canvas, with the surrounding margin left transparent.
+-->
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ground" x1="0.1" y1="0" x2="0.75" y2="1">
+      <stop offset="0" stop-color="#4a5a72" />
+      <stop offset="0.52" stop-color="#252e3c" />
+      <stop offset="1" stop-color="#12161e" />
+    </linearGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.18" />
+      <stop offset="0.45" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="dot" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff6459" />
+      <stop offset="1" stop-color="#e5342c" />
+    </linearGradient>
+  </defs>
+
+  <rect x="100" y="100" width="824" height="824" rx="185" fill="url(#ground)" />
+  <rect x="100" y="100" width="824" height="824" rx="185" fill="url(#sheen)" />
+
+  <!-- Back device: dimmer, so the pair reads as depth rather than as clutter. -->
+  <g>
+    <rect x="230" y="226" width="320" height="512" rx="60"
+          fill="#1b2430" stroke="#ffffff" stroke-opacity="0.48" stroke-width="20" />
+    <rect x="345" y="262" width="90" height="15" rx="7.5" fill="#ffffff" fill-opacity="0.38" />
+  </g>
+
+  <!-- Front device, offset down and to the right so the two overlap. -->
+  <g>
+    <rect x="474" y="286" width="320" height="512" rx="60"
+          fill="#0d1117" stroke="#ffffff" stroke-width="22" />
+    <rect x="589" y="322" width="90" height="15" rx="7.5" fill="#ffffff" fill-opacity="0.55" />
+  </g>
+
+  <!-- The record dot sits on the seam, shared by both devices. -->
+  <circle cx="512" cy="512" r="100" fill="url(#dot)" />
+  <circle cx="512" cy="512" r="100" fill="none" stroke="#ffffff" stroke-opacity="0.28" stroke-width="5" />
+</svg>
