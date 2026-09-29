@@ -5,7 +5,7 @@ device — physical devices, Android emulators and iOS Simulators — and takes
 screenshots, the way Android Studio's *Running Devices* pane does.
 
 <p align="center">
-  <img src="docs/screenshot.png" width="280" alt="Compact single-column window with a device picker, Start/Stop/Screenshot buttons, a save path and the Options panel with Show taps">
+  <img src="docs/screenshot-1.1.0.png" width="280" alt="Compact single-column window with a device picker, Start/Stop/Screenshot buttons, a save path and the Options panel with Show taps">
 </p>
 
 ## What it does
