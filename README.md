@@ -4,7 +4,9 @@ A small macOS desktop app that records the screen of any connected Android or iO
 device — physical devices, Android emulators and iOS Simulators — and takes
 screenshots, the way Android Studio's *Running Devices* pane does.
 
-![Compact single-column window with a device picker, Start/Stop/Screenshot buttons and a save path](docs/screenshot.png)
+<p align="center">
+  <img src="docs/screenshot.png" width="280" alt="Compact single-column window with a device picker, Start/Stop/Screenshot buttons, a save path and the Options panel with Show taps">
+</p>
 
 ## What it does
 
@@ -13,6 +15,8 @@ screenshots, the way Android Studio's *Running Devices* pane does.
   seconds, so plugging a phone in is enough.
 - **Start Recording** / **Stop Recording** — writes a `.mov` (or `.mp4`, see Options).
 - **Take Screenshot** — writes a `.png`.
+- **Show taps** (Options) — touches appear in the recording on Android devices,
+  emulators and the iOS Simulator. Physical iPhones and iPads can't show taps.
 - One save folder for everything, changeable from the main window and remembered
   between launches.
 
@@ -149,6 +153,7 @@ Stored as JSON in `~/Library/Application Support/ScreenSnap/settings.json`.
 | `androidBitrateMbps` | `8` | `screenrecord --bit-rate`. |
 | `iosBitrateMbps` | `10` | Encoder bitrate for tethered iPhones/iPads. |
 | `revealAfterCapture` | `false` | Reveal each finished file in Finder. |
+| `showTouches` | `false` | Show taps while recording (Android and iOS Simulator). |
 | `showOfflineDevices` | `false` | Include shut-down simulators in the picker. |
 
 ## Layout
@@ -166,3 +171,7 @@ src/
   DevicePicker.jsx
   styles.css     light/dark palette following the system appearance
 ```
+
+## License
+
+[MIT](LICENSE)
